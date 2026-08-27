@@ -1,0 +1,14 @@
+{
+    "id": 101,
+    "name": "Praveen Kumar",
+    "skills": [
+        "Python",
+        "Spring Boot",
+        "Kafka"
+    ],
+    "address": {
+        "city": "Bangalore",
+        "state": "Karnataka",
+        "pincode": 575001
+    }
+}
