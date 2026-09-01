@@ -21,7 +21,7 @@ messages = [
         """
     ),
 
-    HumanMessage(content="What is hashmap in java?")
+    HumanMessage(content="What is tuple in python?")
 ]
 
 response = model.invoke(messages)

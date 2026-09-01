@@ -1,0 +1,1 @@
+$env:PYTHONPATH = "c:\SApDevelops\Agentic Ai\Agentic-Ai\python_live\.venv\Lib\site-packages" ; & "C:\Users\C5409915\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\python.exe" "c:\SApDevelops\Agentic Ai\Agentic-Ai\python_live\call_with_langchain.py"
