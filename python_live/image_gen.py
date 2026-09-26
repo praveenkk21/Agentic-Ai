@@ -1,10 +1,10 @@
 from dotenv import load_dotenv
-from openai import OpenAi
+from openai import OpenAI
 import base64
 from pathlib import Path
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.output_parsers import StrOuptutParser
+from langchain_core.output_parsers import StrOutputParser
 
 load_dotenv()
 
@@ -20,7 +20,7 @@ def save(result, filename):
     )
     
 write = {
-    ChatPromptTemplate.from_message([
+    ChatPromptTemplate.from_messages([
         {
             "system",
             "You write smart, visual image prompts, one sentences"
@@ -31,7 +31,7 @@ write = {
         }
     ])
     | ChatOpenAI(model="gpt-4o-mini")
-    | StrOuptutParser()
+    | StrOutputParser()
 }
 
 image_prompt = write.invoke({

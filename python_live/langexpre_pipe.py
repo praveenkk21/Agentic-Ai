@@ -1,16 +1,16 @@
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.output_parsers import {
-    StrOuptutParser,
+from langchain_core.output_parsers import (
+    StrOutputParser,
     JsonOutputParser
-}
+)
 
 load_dotenv()
 
 model = ChatOpenAI(
     model="gpt-4o-mini",
-    temperature=8
+    temperature=0.8
     )
 
 prompt = ChatPromptTemplate.from_messages(
@@ -26,11 +26,12 @@ prompt = ChatPromptTemplate.from_messages(
     ]
 )
 
-parser = StrOuptutParser()
+parser = StrOutputParser()
 
 chain = prompt | model | parser
 
 print(chain.invoke({
     "language" : "java",
+    "limit"  : "5",
     "topic" : "callable"
 }))

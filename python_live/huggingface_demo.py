@@ -1,15 +1,15 @@
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.output_parsers import StrOuptutParser
-from langchain_huggingface import ChatHuggingFace, HunggingFaceEndpoint
+from langchain_core.output_parsers import StrOutputParser
+from langchain_huggingface import ChatHuggingFace, HuggingFaceEndpoint
 
 load_dotenv()
 
-endpoint = HunggingFaceEndpoint(
+endpoint = HuggingFaceEndpoint(
     repo_id="meta-llama/Llama-3.1-8B-Instruct",
-    task="text generator",
-    max_new_token=200,
+    task="text-generation",
+    max_new_tokens=200,
     temperature=0.3
 )
 
